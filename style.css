@@ -83,21 +83,22 @@ footer {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-@media (max-width: 500px) {
+/* Media query mobile */
+
+@media (min-width: 400px) and (max-width: 700px){
   .container {
     display: grid;
     grid-template-columns: 130px 130px 80px;
     grid-template-rows: 150px 150px 80px 80px 150px 150px;
     gap: 10px;
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
+    margin: 20px;
+    width: 800px;
   }
 
   header {
     grid-row: 1/2;
     grid-column: 1/4;
-    font-size: 8px;
+    font-size: 30px;
   }
   nav,
   nav ul {
@@ -143,3 +144,65 @@ footer {
     grid-column: 1/4;
   }
 }
+
+/* Media query tablet */
+
+@media (min-width: 700px) and (max-width: 1024px){
+    .container {
+      display: grid;
+      grid-template-columns: 500px 130px 80px;
+      grid-template-rows: 150px 150px 80px 80px 150px 150px;
+      gap: 10px;
+      margin: 20px;
+      width: 800px;
+    }
+  
+    header {
+      grid-row: 1/2;
+      grid-column: 1/4;
+      font-size: 30px;
+    }
+    nav,
+    nav ul {
+      visibility: hidden;
+    }
+    main {
+      grid-row: 2/3;
+      grid-column: 1/4;
+    }
+  
+    main h2 {
+      position: relative;
+      bottom: 20px;
+      left: 10px;
+    }
+  
+    p {
+      position: relative;
+      bottom: 20px;
+      font-size: 10px;
+    }
+  
+    .aside-one {
+      grid-row: 3/5;
+      grid-column: 1/2;
+    }
+    .aside-two {
+      grid-row: 3/5;
+      grid-column: 2/3;
+    }
+    section {
+      grid-row: 5/6;
+      grid-column: 1/4;
+    }
+  
+    section h2 {
+      position: relative;
+      bottom: 20px;
+      left: 10px;
+    }
+    footer {
+      grid-row: 6/7;
+      grid-column: 1/4;
+    }
+  }
